@@ -1,0 +1,9 @@
+{
+    "name": "linusshops/mirror-connect20-admeris-admerisiop",
+    "version": "0.1.0",
+    "type": "magento-module",
+    "homepage": "http://www.magentocommerce.com/magento-connect/admeris-interac-online-payment-module.html",
+    "extra":{
+        "package-xml": "package.xml"
+    }
+}

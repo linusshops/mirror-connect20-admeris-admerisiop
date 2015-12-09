@@ -1,0 +1,37 @@
+<html>
+<?php 
+if ($_SESSION['date'] != '')
+{
+?>
+    <div align="center">
+
+    <h3>Transaction Summary</h3>
+
+    <form method="post"> The transaction was <b>UNSUCCESSFUL</b>.<br>
+    <br> Transaction Date: <?php echo $_SESSION['date']; $_SESSION['date'] = ''; ?><br>
+    <br> Your order (Invoice: <?php echo $_SESSION['invoice']; $_SESSION['invoice'] = ''; ?>) has been cancelled and will not be fulfilled. If any funds were debited from your account, they will be re-credited in full to your account within 30 minutes. <br>
+    </form>
+
+    <form method="POST" action="<?php echo $this->getUrl(); ?>">
+    <input type="submit" name="Submit" value="Click Here to Return to our Homepage.">
+    </form>
+
+    <form method="POST" action="<?php echo $this->getContinueShoppingUrl(); ?>">
+    <input type="submit" name="Submit" value="Click Here to Return to your Cart.">
+    </form>
+
+    </div>
+<?php
+} else {
+?>
+    <meta http-equiv="refresh" content="0; URL=<?php echo $this->getContinueShoppingUrl()?>">
+    <body>
+    <div class="page-head">
+        <h3><?php echo $this->__('Error occured') ?></h3>
+    </div>
+    <p><?php echo $this->__('Please <a href="%s">continue shopping</a>.', $this->getContinueShoppingUrl()) ?></p>   
+</html>
+<?php
+}
+?>
+

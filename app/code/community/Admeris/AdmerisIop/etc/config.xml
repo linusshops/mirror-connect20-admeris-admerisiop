@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <modules>
+       <Admeris_AdmerisIop>
+<!-- declare module's version information for database updates -->
+          <version>0.1.0</version>
+       </Admeris_AdmerisIop>
+    </modules>
+
+    <global>
+<!-- declare model group -->
+        <models>
+<!-- model group alias to be used in Mage::getModel('admerisiop/...') -->
+            <admerisiop>
+<!-- base class name for the model group -->
+                <class>Admeris_AdmerisIop_Model</class>
+            </admerisiop>
+        </models>
+        <helpers>
+          <admerisiop>
+            <class>Admeris_AdmerisIop_Helper</class>
+          </admerisiop>
+        </helpers>
+
+<!-- declare resource setup-->
+        <resources>
+<!-- resource identifier -->
+            <admerisiop_setup>
+<!-- specify that this resource is a setup resource and used for upgrades -->
+                <setup>
+<!-- which module to look for install/upgrade files in -->
+                    <module>Admeris_AdmerisIop</module>
+                </setup>
+<!-- specify database connection for this resource -->
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </admerisiop_setup>
+            <admerisiop_write>
+                <connection>
+                  <use>core_write</use>
+                </connection>
+            </admerisiop_write>
+            <admerisiop_read>
+               <connection>
+                <use>core_read</use>
+              </connection>
+            </admerisiop_read>
+        </resources>
+        <blocks>
+            <admerisiop><class>Admeris_AdmerisIop_Block</class></admerisiop>
+        </blocks>
+    </global>
+    
+    <frontend>
+        <routers>
+            <admerisiop>
+                <use>standard</use>
+                <args>
+                    <module>Admeris_AdmerisIop</module>
+                    <frontName>admerisiop</frontName>
+                </args>
+            </admerisiop>
+        </routers>
+        <layout>
+            <updates>
+                <admerisiop>
+                    <file>admerisiop.xml</file>
+                </admerisiop>
+            </updates>
+        </layout>
+    </frontend>
+    
+    
+
+<!-- declare default configuration values -->
+    <default>
+<!-- 'payment' configuration section (tab) -->
+        <payment>
+<!-- 'admerisiop' configuration group (fieldset) -->
+            <admerisiop>
+<!-- by default this payment method is inactive -->
+                <active>0</active>
+<!-- model to handle logic for this payment method -->
+                <model>admerisiop/iop</model>
+<!-- order status for new orders paid by this payment method -->
+                <order_status>1</order_status>
+<!-- default title for payment checkout page and order view page -->
+                <title>Interac Online (Admeris)</title>
+                <request_type>authorize</request_type>
+                <payment_environment>D</payment_environment>
+                <allowspecific>0</allowspecific>
+            </admerisiop>
+         </payment>
+    </default>
+</config>

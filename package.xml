@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+    <name>Admeris_AdmerisIop</name>
+    <version>0.1.0</version>
+    <stability>alpha</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Admeris INTERAC Online Plugin</summary>
+    <description>Hosted by Admeris</description>
+    <notes>To use this plugin, please go to Admeris website to get a merchant account and fill in your merchant information.
+
+The transaction result is in the Payment Information section of the Order Invoice.</notes>
+    <authors><author><name>AdmerisSupport</name><user>auto-converted</user><email>wzhu@admeris.com</email></author></authors>
+    <date>2009-08-24</date>
+    <time>15:02:27</time>
+    <contents><target name="magecommunity"><dir><dir name="Admeris"><dir name="AdmerisIop"><dir name="Block"><file name="Failure.php" hash="892713bbb6ec4756500356213dbc17fd"/><file name="Form.php" hash="d53c15ac0ee985d69e0ff2a3269cffa4"/><file name="Info.php" hash="b71e61e46d6cd9c58c5236531f6988d5"/><file name="Processing.php" hash="49496fdc67c14b14e57a67ae2cfcc7c8"/><file name="Success.php" hash="6cc9df1ab07955efd468b5041c32fd0c"/></dir><dir name="controllers"><file name="ProcessingController.php" hash="af7dacc20c296fb2d26a4b3f099b67bd"/></dir><dir name="etc"><file name="config.xml" hash="a55f75ad94ffc36fd4ba5476f3bf6d88"/><file name="system.xml" hash="cf51b2eb7a9ba0de483af6d750925630"/></dir><dir name="Helper"><file name="Data.php" hash="45c77f502df28fe915f00a6d2b35c6a8"/></dir><dir name="Model"><file name="Iop.php" hash="d9d6b8a70870f076ca419ed8bc2265b4"/><dir name="Source"><file name="PaymentEnvironment.php" hash="7c2062230186256a0f4c0d496621fa5d"/></dir></dir></dir></dir></dir></target><target name="magedesign"><dir><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="admerisiop"><file name="info.phtml" hash="83d7dbd952e22b5651cf5bb660b9d8ea"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="admerisiop.xml" hash="bc378fcdb8d9173465e18956f289f9ee"/></dir><dir name="template"><dir name="admerisiop"><file name="failure.phtml" hash="d402317d8706a6d0bc86455b59cbfb28"/><file name="form.phtml" hash="820f4a316fc285668b858c1de29d38d8"/><file name="info.phtml" hash="cc202e4a7a2aa32de36ebef5b52b09e0"/></dir></dir></dir></dir></dir></dir></target><target name="mage"><dir><dir name="app"><dir name="etc"><dir name="modules"><file name="Admeris_AdmerisIop.xml" hash="058712cdc90d44b36fa94f8647d000f1"/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

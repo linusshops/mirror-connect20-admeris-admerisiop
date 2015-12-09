@@ -1,0 +1,18 @@
+<?php 
+	echo $this->getMethod()->getTitle() . '<br/>';
+	if ($this->getInfo()->getLastTransId() == '') {
+		echo '<em>' . $this->__($this->getMethodCode().' :You will be redirected to Admeris website when you place an order.') . '</em>';
+	} else {
+		echo 'The transaction was <b> SUCCESSFUL</b>.' . '<br/>';
+        $comma_separated = $this->getInfo()->getCcApproval();
+        if ($comma_separated != NULL) {
+            list($method, $invoice, $amount, $date, $issname, $issconf) = explode("," , $comma_separated);
+            echo $this->__('Invoice: %s', $this->htmlEscape($invoice)) . '<br/>';
+            echo $this->__('Debit Amount: %s', $this->htmlEscape($amount).' CAD') . '<br/>';
+            echo $this->__('Payment Method: %s', 'INTERAC<sup>&reg;</sup> Online') . '<br/>';
+            echo $this->__('Financial Institution: %s', $this->htmlEscape($issname)) . '<br/>';
+            echo $this->__('Confirmation Number: %s', $this->htmlEscape($issconf)) . '<br/>';
+            echo $this->__('Transaction Date: %s', $this->htmlEscape($date)) . '<br/>'; 
+	    }
+    }
+?>

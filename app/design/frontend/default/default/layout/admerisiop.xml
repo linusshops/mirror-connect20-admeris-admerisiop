@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+-->
+<layout version="0.1.0">
+<!--
+Admeris Failure Response Review
+-->
+<admerisiop_processing_response>
+    <reference name="root">
+        <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+    </reference>
+    <reference name="content">
+        <block type="admerisiop/failure" name="admerisiop_failure" template="admerisiop/failure.phtml" />
+    </reference>
+</admerisiop_processing_response>
+
+</layout>
